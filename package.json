@@ -1,0 +1,33 @@
+{
+  "name": "homebridge-eufy-permanent-lights",
+  "version": "0.3.0",
+  "description": "HomeKit control of eufy Permanent Outdoor Lights (E22 / T8L02) via Homebridge, over eufy's cloud.",
+  "license": "MIT",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=24.5.0",
+    "homebridge": ">=1.6.0"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "eufy",
+    "e22",
+    "t8l02",
+    "light",
+    "homekit",
+    "cloud"
+  ],
+  "dependencies": {
+    "@mega-yfue/eufy-sdk": "^0.3.0"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "config.schema.json",
+    "README.md"
+  ],
+  "scripts": {
+    "selftest": "node test/selftest.js",
+    "cloud-login": "node scripts/cloud-login.mjs"
+  }
+}

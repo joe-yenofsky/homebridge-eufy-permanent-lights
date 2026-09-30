@@ -1,0 +1,42 @@
+{
+  "pluginAlias": "EufyCloudLights",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "HomeKit control of eufy Permanent Outdoor Lights (E22 / T8L02) over eufy's cloud. Works from anywhere — no Bluetooth range needed. Auto-discovers the smart lights on your account.",
+  "footerDisplay": "Uses @mega-yfue/eufy-sdk. Your login is used only to reach your own devices; the session token is cached at sessionPath. If your account uses 2FA, run `npm run cloud-login` once (see README) to establish the session.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform Name",
+        "type": "string",
+        "default": "Eufy Cloud Lights",
+        "required": true
+      },
+      "email": {
+        "title": "eufy account email",
+        "type": "string",
+        "format": "email",
+        "required": true
+      },
+      "password": {
+        "title": "eufy account password",
+        "type": "string",
+        "required": true,
+        "x-schema-form": { "type": "password" }
+      },
+      "countryCode": {
+        "title": "Country code",
+        "type": "string",
+        "default": "US",
+        "description": "Two-letter country of your eufy account (region auto-discovers from it)."
+      },
+      "sessionPath": {
+        "title": "Session file path (advanced)",
+        "type": "string",
+        "description": "Where to cache the login session. Defaults to <homebridge storage>/eufy-permanent-lights-session.json.",
+        "required": false
+      }
+    }
+  }
+}

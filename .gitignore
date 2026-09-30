@@ -1,0 +1,36 @@
+# --- Capture data: CONTAINS LIVE AUTH TOKENS AND DEVICE IDS ---
+# Never commit. Never paste into issues, READMEs or bug reports.
+captures/
+*.flow
+*.har
+*.pcap
+*.pcapng
+*.mitm
+
+# --- APKs and decompiled output ---
+*.apk
+*.xapk
+*.apks
+apk/
+decompiled/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+credentials.json
+tokens.json
+
+# --- Node ---
+node_modules/
+dist/
+*.tgz
+npm-debug.log*
+
+# --- macOS ---
+.DS_Store
+
+# --- Personal dev artifacts (kept local; not part of the published plugin) ---
+FINDINGS.md
+tools/
+pi-setup/deploy_pi.sh
